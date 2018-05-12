@@ -1,4 +1,4 @@
 class Restaurant < ApplicationRecord
-  has_many :comments
   validates :name, presence: true, uniqueness: true
+  has_many :comments, dependent: :destroy
 end
